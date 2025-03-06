@@ -1,30 +1,12 @@
 <script>
-	import { data, title } from '@data/resume';
-
-	import Chip from '$lib/components/Chip/Chip.svelte';
-	import CommonPage from '$lib/components/CommonPage.svelte';
+	import TitledPage from '$lib/components/common/titled-page/titled-page.svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
+	import ResumeData from '$lib/data/resume';
 </script>
 
-<CommonPage {title}>
-	<div class="resume">
-		{#if data}
-			<a href={data} download>
-				<Chip size={'1.25em'}>Download</Chip>
-			</a>
-		{:else}
-			<Chip>Ooops! no CV at the moment.</Chip>
-		{/if}
-	</div>
-</CommonPage>
-
-<style lang="scss">
-	.resume {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-
-		& > a {
-			color: inherit;
-		}
-	}
-</style>
+<TitledPage title={ResumeData.title}>
+	<a href={ResumeData.resume} class="mx-auto">
+		<Button>Загрузить</Button>
+	</a>
+	<iframe src={ResumeData.resume} class="h-full w-full" title={ResumeData.title}></iframe>
+</TitledPage>

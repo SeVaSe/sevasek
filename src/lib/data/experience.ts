@@ -1,53 +1,42 @@
 import Assets from './assets';
 import { getSkills } from './skills';
-import { ContractType, type Experience } from '../types';
+import { ContractType, type Experience } from './types';
 
-export const items: Array<Experience> = [
+const title = 'Опыт';
+
+const items: Array<Experience> = [
 	{
-		slug: 'open-sourcer',
-		company: 'Self-employed',
-		description: 'Creating awesome tools for developers.',
+		slug: 'работа1',
+		company: 'компания',
+		description: 'описание',
 		contract: ContractType.SelfEmployed,
-		type: 'Software Development',
-		location: 'Home',
+		type: 'Софт разраб',
+		location: 'Москва',
 		period: { from: new Date() },
 		skills: getSkills('ts', 'js'),
-		name: 'Open Source Developer',
+		name: 'инженер',
 		color: 'red',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome tools for developers.'
+		shortDescription: 'краткое описание'
 	},
 	{
-		slug: 'software-freelance',
-		company: 'Self-employed',
-		description: 'Creating awesome applications for customers.',
-		contract: ContractType.Freelance,
-		type: 'Software Development',
-		location: 'Home',
+		slug: 'работа2',
+		company: 'компания',
+		description: 'описание',
+		contract: ContractType.SelfEmployed,
+		type: 'Софт разраб',
+		location: 'Москва',
 		period: { from: new Date() },
-		skills: getSkills('svelte', 'ts', 'sass', 'css', 'html', 'js'),
-		name: 'Freelancer',
-		color: 'blue',
+		skills: getSkills('ts', 'js'),
+		name: 'инженер',
+		color: 'red',
 		links: [],
 		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome applications for customers.'
-	},
-	{
-		slug: 'software-freelance-junior',
-		company: 'Self-employed',
-		description: 'Creating awesome applications for customers.',
-		contract: ContractType.Freelance,
-		type: 'Software Development',
-		location: 'Home',
-		period: { from: new Date(2022, 0, 1), to: new Date() },
-		skills: getSkills('css', 'html', 'js'),
-		name: 'Junior Freelancer',
-		color: 'green',
-		links: [],
-		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome applications for customers.'
+		shortDescription: 'краткое описание'
 	}
 ];
 
-export const title = 'Experience';
+const ExperienceData = { title, items };
+
+export default ExperienceData;

@@ -1,42 +1,47 @@
 import Assets from './assets';
 import { getSkills } from './skills';
-import type { Project } from '../types';
+import type { Project } from './types';
 
-export const items: Array<Project> = [
+const items: Array<Project> = [
 	{
-		slug: 'slick-portfolio-angular',
+		slug: 'test1',
 		color: '#5e95e3',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			'тест описание',
 		shortDescription:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
+			'краткое описание',
+		links: [
+			{ to: 'https://github.com/', label: 'GitHub' },
+			{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'Reporsitory' },
+			{ to: 'https://svelte.dev/', label: 'Svelte' },
+			{ to: 'https://www.shadcn-svelte.com/', label: 'Shadcn Svelte' }
+		],
 		logo: Assets.Unknown,
-		name: 'Slick Portfolio',
+		name: 'Тест название1',
 		period: {
 			from: new Date()
 		},
 		skills: getSkills('angular', 'ts', 'tailwind'),
-		type: 'Website Template'
+		type: 'Тип'
 	},
 	{
-		slug: 'slick-portfolio-svelte',
+		slug: 'test2',
 		color: '#ff3e00',
 		description:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
+			'Описание полное',
 		shortDescription:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
+			'Краткое описание',
+		links: [{ to: 'https://github.com', label: 'GitHub' }],
 		logo: Assets.Svelte,
-		name: 'Slick Portfolio',
+		name: 'Тест название2',
 		period: {
 			from: new Date()
 		},
 		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
-		type: 'Website Template',
+		type: 'Тип',
 		screenshots: [
 			{
-				label: 'screen 1',
+				label: '1',
 				src: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
 			},
 			{
@@ -63,4 +68,8 @@ export const items: Array<Project> = [
 	}
 ];
 
-export const title = 'Projects';
+const title = 'Проекты';
+
+const ProjectsData = { title, items };
+
+export default ProjectsData;

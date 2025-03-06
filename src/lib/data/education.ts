@@ -1,31 +1,47 @@
 import Assets from './assets';
-import type { Education } from '../types';
+import type { Education } from './types';
 
-export const items: Array<Education> = [
+const title = 'Обучение';
+
+const items: Array<Education> = [
 	{
-		degree: 'Bachelor degree of Computer Science',
+		degree: 'Колледж информатики и программирования при Финансовом Университете',
 		description: '',
-		location: 'Tunisia',
+		location: 'Москва',
 		logo: Assets.Unknown,
 		name: '',
-		organization: 'ISTIC',
-		period: { from: new Date(2020, 0, 1), to: new Date(2022, 5, 1) },
+		organization: 'КИПФИН',
+		period: { from: new Date(2020, 8, 1), to: new Date(2024, 6, 5) },
 		shortDescription: '',
 		slug: 'dummy-education-item',
-		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
+		subjects: ['СПО', 'Информационные системы и программирование', 'Очная форма обучения']
 	},
 	{
-		degree: 'PhD of Computer Science',
+		degree: 'Финансовый университет при Правительстве РФ',
 		description: '',
-		location: 'USA',
+		location: 'Москва',
 		logo: Assets.Unknown,
 		name: '',
-		organization: 'MIT',
-		period: { from: new Date(2023, 0, 1) },
+		organization: 'ФУ',
+		period: { from: new Date(2024, 9, 5) },
 		shortDescription: '',
 		slug: 'dummy-education-item-2',
-		subjects: ['Assembly', 'Rust', 'Computer Architecture', 'Algorithms and Data structures']
+		subjects: ['Бакалавриат', 'Прикладная информатика', 'Заочная форма обучения']
+	},
+	{
+		degree: 'Магистратура...?',
+		description: 'Думаю куда поступать на магистратуру, какое направление выбрать',
+		location: 'Москва',
+		logo: Assets.Unknown,
+		name: '',
+		organization: 'Какой универ?',
+		period: { from: new Date()},
+		shortDescription: 'Думаю куда поступать на магистратуру, какое направление выбрать',
+		slug: 'dummy-education-item-3',
+		subjects: ['Магистратура?', 'Политология?', 'Прикладная информатика?']
 	}
 ];
 
-export const title = 'Education';
+const EducationData = { title, items };
+
+export default EducationData;
