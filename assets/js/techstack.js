@@ -93,7 +93,7 @@ const displayTechStacksCards = () => {
         <div class="card_header">
           <header>
             <div class="text-center langName">
-              <h4>${stack.langName}</h4>
+              <h4 style="font-family: inherit; font-weight: normal;">${stack.langName}</h4>
             </div>
           </header>
           <ul class="description">

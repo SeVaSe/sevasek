@@ -47,7 +47,7 @@ const research = [
 
   {
     "title": "Клиент-Сервер",
-    "authors": "Проект клиент-серверной архитектуры на C++",
+    "authors": "Проект клиент-серверной архитектуры",
     "conferences": "C++",
     "researchYr": "2023",
     "citebox": "popup20",
