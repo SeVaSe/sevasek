@@ -1,0 +1,42 @@
+/* Стили для прелоадера */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Черный фон */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Стили для прогресс-бара */
+.progress-bar {
+  position: relative;
+  width: 80%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон линии */
+  overflow: hidden;
+}
+
+/* Анимация заполнения линии */
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #b477e3, #181875); /* Неоновый градиент */
+  box-shadow: 0 0 10px #b477e3, 0 0 20px #181875; /* Эффект свечения */
+  animation: loading 1s linear forwards;
+}
+
+/* Ключевые кадры анимации */
+@keyframes loading {
+  to {
+    width: 100%;
+  }
+}
